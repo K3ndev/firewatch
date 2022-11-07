@@ -1,25 +1,30 @@
 import type { Component } from 'solid-js';
+import { Button, Header, Footer } from './components/index'
+
 
 const App: Component = () => {
   return (
     <>
       <div class='page'>
+
         {/* header */}
-        <section class=''>
-          <nav>nav</nav>
-          <div>parallax img</div>
-        </section>
+        <Header/>
 
         {/* main */}
         <main class='page__main'>
 
-          <section>
-            <h1>AVAILABLE NOW FOR $19.99</h1>
-            <div>
-              <button>WINDOWS MAC LINUX</button>
-              <button>PLAYSTATION 4</button>
-              <button>NINTENDO SWITCH</button>
-              <button>XBOX ONE</button>
+          <section class='buy'>
+            <h1 class='buy__banner'>AVAILABLE NOW FOR $19.99</h1>
+
+            <div class='buy__internallinks'>
+              <div class='buy__internallinks-link'>
+                <button>WINDOWS MAC LINUX</button>
+                <button>PLAYSTATION 4</button>
+              </div>
+              <div class='buy__internallinks-link'>
+                <button>NINTENDO SWITCH</button>
+                <button>XBOX ONE</button>
+              </div>
             </div>
           </section>
 
@@ -58,19 +63,8 @@ const App: Component = () => {
         </main>
 
         {/* footer */}
-        <footer>
-          <div>
-            <p>©2022 CAMPO SANTO, IN COOPERATION WITH PANIC.</p>
-            <p>FIREWATCH IS A TRADEMARK OF CAMPO SANTO.</p>
-            <p>NINTENDO SWITCH IS A TRADEMARK OF NINTENDO.</p>
-          </div>
+       <Footer/>
 
-          <div>
-            <img src="/image/logo_camposanto_transparent.png" alt="logo_camposanto" />
-            <img src="/image/logo_panic_transparent.png" alt="logo_panic" />
-          </div>
-
-        </footer>
       </div>
     </>
   );
